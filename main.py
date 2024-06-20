@@ -10,6 +10,7 @@ while True:
     # for index, item in enumerate(new_todos):
     #     print(f"{index + 1}. {item}")
 
+    print("The time is below: ")
     print(time.strftime("%b %d, %Y %H:%M:%S"))
 
     user_action = input("Type save, add, view, edit, complete, or exit: ")
