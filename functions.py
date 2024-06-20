@@ -1,5 +1,8 @@
 # Custom Functions
-def get_todos(filepath='files/todos.txt'):
+FILEPATH = 'files/todos.txt'
+
+
+def get_todos(filepath=FILEPATH):
     """Reads the text file and returns contents as a list. """
     # Open/read file, Get user input
     with open(filepath, 'r') as file_local:
@@ -8,7 +11,7 @@ def get_todos(filepath='files/todos.txt'):
     return todos_local
 
 
-def write_todos(todos_arg, filepath='files/todos.txt'):
+def write_todos(todos_arg, filepath=FILEPATH):
     """Write the new to-do item to the text file. """
     with open(filepath, 'w') as file_local:
         file_local.writelines(todos_arg)
