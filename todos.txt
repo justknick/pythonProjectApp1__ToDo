@@ -8,4 +8,4 @@ eat food
 clean dishes
 bake turkey
 drive to place
-check plans
+dont check plans
