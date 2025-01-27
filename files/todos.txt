@@ -6,6 +6,5 @@ make soup
 eat pizza
 eat food
 clean dishes
-bake turkey
-drive to place
-dont check plans
+test button
+say hi 
