@@ -1,6 +1,17 @@
 import streamlit as st
 import functions
 
+def add_todo():
+    # get value the user inputs and adds it to the current list
+    todo = st.session_state["new_todo"] + "\n"
+    print(todo)
+    # add new to do item to the todos dictionary
+    my_todos.append(todo)
+    # update the todo.txt file by calling the write function
+    functions.write_todos(my_todos)
+    # st.text_input(value='')
+
+
 my_todos = functions.get_todos()
 
 string_title = "My ToDo App"
@@ -18,8 +29,10 @@ for todo in my_todos:
 
 # st.checkbox("shop for groceries")
 
-st.text_input(label="", placeholder=string_input)
+st.text_input(label="input", label_visibility="hidden", placeholder=string_input,
+              on_change=add_todo, key='new_todo')
 
 print("loaded")
 
 st.session_state
+
