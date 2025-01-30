@@ -24,8 +24,14 @@ st.title(string_title)
 st.subheader(string_subheader)
 st.text(string_text)
 
-for todo in my_todos:
-    st.checkbox(todo)
+for index, todo in enumerate(my_todos):
+    checkbox = st.checkbox(todo, key=todo)
+    if checkbox:
+        print(todo.rstrip('\n'), " (", checkbox, ")")
+        my_todos.pop(index)
+        functions.write_todos(my_todos)
+        del st.session_state[todo]
+        st.rerun()
 
 # st.checkbox("shop for groceries")
 
